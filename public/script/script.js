@@ -14,10 +14,10 @@ const envioFormuChat= function(e){
 		autor:{
 			email:e.target.email.value,
 			nombre:e.target.nombre.value,
-			apellido:e.target.apellido.value,
-			edad:e.target.edad.value,
-			alias:e.target.alias.value,
-			avatar:e.target.avatar.value,
+			apellido:'prueba',
+			edad:20,
+			alias:'prueba',
+			avatar:'ruebaavatar',
 		},
 		texto: e.target.mensaje.value,
 		fecha:new Date(Date.now())
