@@ -47,8 +47,10 @@ app.use(compression({
 }))
 
 //dontenv variables
-const PORT = process.argv[2] || 8080
-const typeMode = process.argv[3] || 8080
+// const PORT = process.argv[2] || 8080
+// const typeMode = process.argv[3] || ''
+const PORT = process.env.PORT || 8080
+const typeMode = process.env.typeMode || 'cluster'
 const URI_MONGODB = process.env.URI_MONGODB
 const URI_SESSIONDB = process.env.URI_SESSIONDB
 const KEY = process.env.KEY
