@@ -83,7 +83,7 @@ app.use(cookieParser())
 //iniciamos pasarela middleware passport
 initializePassport()
 app.use(passport.initialize())
-app.use(passport.session())
+// app.use(passport.session())
 
 
 // si viene cluster creamos muchas instancias, sino hace un solo hijo
