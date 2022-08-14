@@ -3,8 +3,8 @@ const productosData = document.getElementById('productosData')
 const dataFetch = async()=>{
 	const data  = await fetch('http://localhost:8080/api/productosGet')
 	const result = await data.json()
-	console.log(result)
-	return result.reverse()
+	const resultReverse = result.reverse()
+	return resultReverse
 
 }
 dataFetch().then(e=>{
