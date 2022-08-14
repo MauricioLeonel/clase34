@@ -1,0 +1,49 @@
+{
+	"apps":[
+		{
+			"name":"proceso0",
+			"script":"index.js",
+			"watch":"true",
+			"args":"8080 fork",
+			"exec_mode": "fork"
+		},
+		{
+			"name":"proceso1",
+			"script":"index.js",
+			"watch":"true",
+			"args":"8081",
+			"instances":"max",
+			"exec_mode": "cluster"
+		},
+		{
+			"name":"proceso2",
+			"script":"index.js",
+			"watch":"true",
+			"args":"8082 fork",
+			"exec_mode": "fork"
+
+		},
+		{
+			"name":"proceso3",
+			"script":"index.js",
+			"watch":"true",
+			"args":"8083 fork",
+			"exec_mode": "fork"
+
+		},
+		{
+			"name":"proceso4",
+			"script":"index.js",
+			"watch":"true",
+			"args":"8084 fork",
+			"exec_mode": "fork"
+		},
+		{
+			"name":"proceso5",
+			"script":"index.js",
+			"watch":"true",
+			"args":"8085 fork",
+			"exec_mode": "fork"
+		}
+	]
+}
