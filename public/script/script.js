@@ -33,7 +33,10 @@ const envioMensaje = (data)=>{
 	document.getElementById('compresion').innerHTML = ''
 	document.getElementById('compresion').innerHTML = `${data.comprimido}%`
 	document.getElementById('chatContenedor').innerHTML = ''
-	data.result.map(e=>{
+	const dataReverse = data.result.reverse()
+	// console.log(dataReverse)
+	dataReverse.map(e=>{
+		// const result = data.entities.mensajes.
 		const dataMostar = data.entities.mensajes[e]
 		document.getElementById('chatContenedor').innerHTML +=`<span class="email">${dataMostar.autor}</span> [<span class="fecha">${dataMostar.fecha}</span>]: <span class="mensaje">${dataMostar.texto}</span> </br>` 
 	})
