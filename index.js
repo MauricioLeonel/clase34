@@ -55,21 +55,21 @@ const KEY = process.env.KEY
 const SECRET_KEY = process.env.SECRET_KEY
 
 //conectamos db
-mongoose.connect(URI_MONGODB)
-.catch(e=>{
-	console.log(e)
-})
+// mongoose.connect(URI_MONGODB)
+// .catch(e=>{
+// 	console.log(e)
+// })
 
-app.use(session({
-	key:KEY,
-	secret:SECRET_KEY,
-	resave:false,
-	saveUninitialized:false,
-	store:mongoStore.create({
-		mongoUrl:URI_SESSIONDB
-	}),
-	cookie:{maxAge:600000}
-}))
+// app.use(session({
+// 	key:KEY,
+// 	secret:SECRET_KEY,
+// 	resave:false,
+// 	saveUninitialized:false,
+// 	store:mongoStore.create({
+// 		mongoUrl:URI_SESSIONDB
+// 	}),
+// 	cookie:{maxAge:600000}
+// }))
 
 
 app.use(express.json())
