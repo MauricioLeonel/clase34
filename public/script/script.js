@@ -11,14 +11,12 @@ const envioFormuChat= function(e){
 	e.preventDefault()
 	e.stopPropagation()
 	const data = {
-		autor:{
-			email:e.target.email.value,
-			nombre:e.target.nombre.value,
-			apellido:'prueba',
-			edad:20,
-			alias:'prueba',
-			avatar:'ruebaavatar',
-		},
+		email:e.target.email.value,
+		nombre:e.target.nombre.value,
+		apellido:'prueba',
+		edad:20,
+		alias:'prueba',
+		avatar:'ruebaavatar',
 		texto: e.target.mensaje.value,
 		fecha:new Date(Date.now())
 	}

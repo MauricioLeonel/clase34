@@ -13,7 +13,7 @@ const mongoStore = require('connect-mongo')
 const modelsChat = require('./models/modelsChat.js')
 const DaoMongoChats = require('./dao/mongo/DaoChats.js')
 const chats = new DaoMongoChats(modelsChat)
-
+const mensajeDTO = require('./dto/mensaje.dto.js')
 //inicialized de passport 
 const initializePassport = require('./services/passport.config.js')
 const passport = require('passport')
@@ -112,10 +112,8 @@ if(typeMode != 'fork' && cluster.isPrimary){
 	io.on('connection',async function(cliente){
 		cliente.on('mensajeChat',async(data)=>{
 			try{
-				if(data.texto===''){
-					throw new Error('el campo no puede estar vacio')
-				}
-				const chat = await chats.saveData(data)
+				const mensajeriadto = new mensajeDTO(data)
+				const chat = await chats.saveData(mensajeriadto)
 				const resultNewChat = await chats.getAll()
 				const resultChatComplete = await dataChat(resultNewChat)
 				io.sockets.emit('mensajesChat',resultChatComplete)
